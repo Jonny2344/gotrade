@@ -6,10 +6,11 @@ export default function CTA() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isValidEmail = value => /^(?:[^\s@]+)@(?:[^\s@]+)\.[^\s@]+$/.test(value);
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
 
     const trimmed = email.trim();
@@ -26,9 +27,32 @@ export default function CTA() {
     }
 
     setError('');
-    setSubmitted(true);
-    setEmail('');
-    window.setTimeout(() => setSubmitted(false), 2400);
+    setSubmitted(false);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: trimmed })
+      });
+
+      const payload = await response.json();
+
+      if (!response.ok) {
+        setError(payload?.error || 'Something went wrong. Please try again.');
+        return;
+      }
+
+      setSubmitted(true);
+      setEmail('');
+    } catch {
+      setError('Unable to join waitlist right now. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleEmailChange = event => {
@@ -64,9 +88,10 @@ export default function CTA() {
               />
               <button
                 type="submit"
-                className="rounded-full bg-brand-orange px-7 py-4 font-semibold text-brand-text transition duration-300 hover:-translate-y-0.5 hover:bg-[#fb8b3d] hover:shadow-[0_12px_30px_rgba(249,115,22,0.35)] sm:min-w-[190px]"
+                disabled={isSubmitting}
+                className="rounded-full bg-brand-orange px-7 py-4 font-semibold text-brand-text transition duration-300 hover:-translate-y-0.5 hover:bg-[#fb8b3d] hover:shadow-[0_12px_30px_rgba(249,115,22,0.35)] disabled:cursor-not-allowed disabled:opacity-70 sm:min-w-[190px]"
               >
-                Join Waitlist
+                {isSubmitting ? 'Joining...' : 'Join Waitlist'}
               </button>
             </div>
             <p className="mt-3 text-xs text-brand-muted/90 sm:text-sm">
@@ -86,7 +111,7 @@ export default function CTA() {
                     : 'text-emerald-300 opacity-0 -translate-y-1'
               }`}
             >
-              {error || 'Thanks, you are on the list.'}
+              {error || "You're on the waitlist."}
             </p>
           </form>
         </div>

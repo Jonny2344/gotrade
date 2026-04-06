@@ -15,6 +15,9 @@ This is a clean reset build of GoTrade with:
    - `RESEND_API_KEY`
    - `CONTACT_FROM_EMAIL`
    - `CONTACT_TO_EMAIL`
+   - `WAITLIST_FROM_EMAIL`
+   - `SUPABASE_URL`
+   - `SUPABASE_SERVICE_ROLE_KEY`
 
 3. Start server
    npm start
