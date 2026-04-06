@@ -1,0 +1,40 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build
+        run: |
+          if [ -f go.mod ]; then
+            go build ./...
+          else
+            echo "No Go module found, skipping build step"
+          fi
+
+      - name: Test
+        run: |
+          if [ -f go.mod ]; then
+            go test ./...
+          else
+            echo "No Go module found, skipping test step"
+          fi
+
+      - name: Deploy
+        run: echo "Deploy step — configure your deployment target here"
