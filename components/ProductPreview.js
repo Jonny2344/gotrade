@@ -668,7 +668,7 @@ export default function ProductPreview() {
         </button>
       </div>
 
-      <div className="mx-5 mb-4 flex flex-wrap items-center justify-between gap-2 px-1">
+      <div className="mx-3 mb-4 flex flex-wrap items-center justify-between gap-2 sm:mx-5">
         {shouldShowVoiceHelper && (
           <p className={`text-[9px] font-medium ${voiceError ? 'text-amber-200/72' : 'text-brand-muted/52'}`}>
             {voiceHelperText}
@@ -690,7 +690,7 @@ export default function ProductPreview() {
       </div>
 
       {/* Filters and sorting */}
-      <div className="mx-5 mb-4 rounded-xl border border-white/10 bg-white/[0.04] p-3.5">
+      <div className="mx-3 mb-4 rounded-xl border border-white/10 bg-white/[0.04] p-3 sm:mx-5 sm:p-3.5">
         <div className="flex flex-wrap items-end gap-x-2.5 gap-y-2">
           <div ref={sortMenuRef} className="relative">
             <label className="mb-1 block text-[10px] font-medium uppercase tracking-[0.16em] text-brand-muted/60">
@@ -699,7 +699,7 @@ export default function ProductPreview() {
             <button
               type="button"
               onClick={() => setIsSortMenuOpen((current) => !current)}
-              className="flex h-[34px] w-[220px] items-center justify-between gap-2 rounded-lg border border-white/10 bg-white/[0.06] px-3 py-2 text-left text-[11px] font-medium text-brand-text shadow-[0_6px_14px_rgba(2,8,23,0.22)] backdrop-blur-sm transition-all duration-200 hover:border-white/22 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-blue/35"
+              className="flex h-[34px] w-full items-center justify-between gap-2 rounded-lg border border-white/10 bg-white/[0.06] px-3 py-2 text-left text-[11px] font-medium text-brand-text shadow-[0_6px_14px_rgba(2,8,23,0.22)] backdrop-blur-sm transition-all duration-200 hover:border-white/22 hover:bg-white/[0.1] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-blue/35 sm:w-[220px]"
               aria-haspopup="listbox"
               aria-expanded={isSortMenuOpen}
             >
@@ -710,7 +710,7 @@ export default function ProductPreview() {
             </button>
 
             {isSortMenuOpen && (
-              <div className="absolute left-0 z-30 mt-1.5 w-[220px] animate-[dropdown-open_150ms_ease-out] overflow-hidden rounded-xl border border-white/10 bg-[#0d1524]/96 p-2 shadow-[0_8px_24px_rgba(2,8,23,0.38),0_2px_8px_rgba(2,8,23,0.18)] backdrop-blur-md">
+              <div className="absolute left-0 z-30 mt-1.5 w-full animate-[dropdown-open_150ms_ease-out] overflow-hidden rounded-xl border border-white/10 bg-[#0d1524]/96 p-2 shadow-[0_8px_24px_rgba(2,8,23,0.38),0_2px_8px_rgba(2,8,23,0.18)] backdrop-blur-md sm:w-[220px]">
                 {SORT_GROUPS.map((group, groupIndex) => (
                   <div key={group.label} className={groupIndex > 0 ? 'mt-3.5 border-t border-white/[0.04] pt-3.5' : ''}>
                     <p className="mb-0.5 px-2.5 pb-1 text-[9px] font-medium uppercase tracking-[0.15em] text-white/40">{group.label}</p>
@@ -815,7 +815,7 @@ export default function ProductPreview() {
                 role="button"
                 tabIndex={0}
                 aria-pressed={isSelected}
-                className={`group relative flex min-h-[18.5rem] cursor-pointer flex-col rounded-xl border px-[1.125rem] py-[1.125rem] transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/45 focus-visible:ring-offset-1 focus-visible:ring-offset-[#0b0f19] sm:min-h-[19rem] sm:px-5 sm:py-5 ${
+                className={`group relative flex cursor-pointer flex-col rounded-xl border px-4 py-4 transition-all duration-300 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/45 focus-visible:ring-offset-1 focus-visible:ring-offset-[#0b0f19] sm:min-h-[19rem] sm:px-5 sm:py-5 ${
                   isSelected
                     ? 'border-brand-blue/34 bg-brand-blue/[0.075] shadow-[0_6px_22px_rgba(59,130,246,0.14)]'
                     : 'border-white/[0.07] bg-white/[0.03] hover:-translate-y-0.5 hover:border-white/15 hover:bg-white/[0.06] hover:shadow-[0_8px_24px_rgba(0,0,0,0.42)]'

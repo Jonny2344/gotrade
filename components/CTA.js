@@ -40,11 +40,11 @@ export default function CTA() {
 
   return (
     <section id="waitlist" className="section-wrap pb-24 pt-16 sm:pt-20">
-      <div className="fade-up section-inner soft-ring rounded-3xl border border-brand-orange/55 bg-gradient-to-r from-brand-card via-brand-card to-[#121b2c] p-9 shadow-[0_34px_90px_rgba(8,14,28,0.62)] sm:p-12">
+      <div className="fade-up section-inner soft-ring rounded-3xl border border-brand-orange/55 bg-gradient-to-r from-brand-card via-brand-card to-[#121b2c] p-6 shadow-[0_34px_90px_rgba(8,14,28,0.62)] sm:p-12">
         <div className="flex flex-col items-start justify-between gap-9 md:flex-row md:items-start md:gap-10">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-brand-blue">Call To Action</p>
-            <h2 className="mt-2 text-4xl font-semibold text-brand-text sm:text-5xl">Start saving time on every job today</h2>
+            <h2 className="mt-2 text-3xl font-semibold text-brand-text sm:text-4xl lg:text-5xl">Start saving time on every job today</h2>
             <p className="mt-3 max-w-xl text-sm text-brand-muted/88 sm:text-base">Join the waitlist before public launch and get early access.</p>
           </div>
           <form className="w-full max-w-xl md:pt-1" onSubmit={handleSubmit}>

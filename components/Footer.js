@@ -17,13 +17,13 @@ function SocialIcon({ label, path, href = '#' }) {
 export default function Footer() {
   return (
     <footer className="border-t border-white/12 px-4 py-14 sm:px-6 sm:py-16">
-      <div className="mx-auto flex max-w-6xl flex-col gap-9 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:gap-9 sm:text-left">
         <div>
           <p className="text-xl font-semibold text-brand-text">GoTrade</p>
           <p className="mt-1 text-sm text-brand-muted">Scan. Find. Save. Fast.</p>
         </div>
 
-        <ul className="flex flex-wrap justify-center gap-6 text-sm text-brand-muted sm:justify-start">
+        <ul className="flex flex-wrap justify-center gap-4 text-sm text-brand-muted/80 sm:justify-start sm:gap-6">
           <li><a href="/contact" className="transition duration-300 hover:text-brand-blue hover:underline hover:underline-offset-4 hover:-translate-y-0.5 inline-flex">Contact</a></li>
           <li><a href="/privacy-policy" className="transition duration-300 hover:text-brand-blue hover:underline hover:underline-offset-4">Privacy Policy</a></li>
         </ul>
