@@ -23,7 +23,7 @@ export default function Footer() {
           <p className="mt-1 text-sm text-brand-muted">Scan. Find. Save. Fast.</p>
         </div>
 
-        <ul className="flex flex-wrap gap-6 text-sm text-brand-muted">
+        <ul className="flex flex-wrap justify-center gap-6 text-sm text-brand-muted sm:justify-start">
           <li><a href="/contact" className="transition duration-300 hover:text-brand-blue hover:underline hover:underline-offset-4 hover:-translate-y-0.5 inline-flex">Contact</a></li>
           <li><a href="/privacy-policy" className="transition duration-300 hover:text-brand-blue hover:underline hover:underline-offset-4">Privacy Policy</a></li>
         </ul>
