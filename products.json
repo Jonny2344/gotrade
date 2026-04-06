@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Cordless Drill",
+    "brand": "Makita",
+    "category": "power-tools",
+    "image": "https://images.unsplash.com/photo-1504917595217-3404ee9c6e95?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Screwfix", "price": 139.99, "distance": "5 miles", "stock": "In Stock", "rating": 4.7 },
+      { "name": "Toolstation", "price": 136.50, "distance": "4 miles", "stock": "In Stock", "rating": 4.6 },
+      { "name": "Wickes", "price": 142.00, "distance": "7 miles", "stock": "Low Stock", "rating": 4.4 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Impact Driver",
+    "brand": "DeWalt",
+    "category": "power-tools",
+    "image": "https://images.unsplash.com/photo-1541534741688-6078e843a2e4?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Screwfix", "price": 159.99, "distance": "5 miles", "stock": "In Stock", "rating": 4.8 },
+      { "name": "Travis Perkins", "price": 165.49, "distance": "8 miles", "stock": "In Stock", "rating": 4.5 },
+      { "name": "Toolstation", "price": 157.95, "distance": "4 miles", "stock": "Low Stock", "rating": 4.6 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Hammer",
+    "brand": "Stanley",
+    "category": "hand-tools",
+    "image": "https://images.unsplash.com/photo-1587552914667-cd8e9236ff23?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Toolstation", "price": 14.79, "distance": "4 miles", "stock": "In Stock", "rating": 4.5 },
+      { "name": "Screwfix", "price": 14.99, "distance": "5 miles", "stock": "In Stock", "rating": 4.6 },
+      { "name": "Wickes", "price": 15.50, "distance": "7 miles", "stock": "In Stock", "rating": 4.2 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Copper Pipe 15mm",
+    "brand": "Yorkshire",
+    "category": "plumbing",
+    "image": "https://images.unsplash.com/photo-1556910103-1a80b8c9e0dd?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "City Plumbing", "price": 21.80, "distance": "6 miles", "stock": "In Stock", "rating": 4.6 },
+      { "name": "Travis Perkins", "price": 22.20, "distance": "8 miles", "stock": "In Stock", "rating": 4.4 },
+      { "name": "Wickes", "price": 22.95, "distance": "7 miles", "stock": "Low Stock", "rating": 4.2 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "LED Downlight",
+    "brand": "Philips",
+    "category": "electrical",
+    "image": "https://images.unsplash.com/photo-1515548211058-832a58aa9336?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "CEF", "price": 8.75, "distance": "3 miles", "stock": "In Stock", "rating": 4.7 },
+      { "name": "Toolstation", "price": 8.95, "distance": "4 miles", "stock": "In Stock", "rating": 4.4 },
+      { "name": "Screwfix", "price": 9.10, "distance": "5 miles", "stock": "Low Stock", "rating": 4.3 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Circular Saw",
+    "brand": "Bosch",
+    "category": "power-tools",
+    "image": "https://images.unsplash.com/photo-1495295350413-ee9dd50f3c77?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Screwfix", "price": 149.00, "distance": "5 miles", "stock": "In Stock", "rating": 4.6 },
+      { "name": "Toolstation", "price": 146.75, "distance": "4 miles", "stock": "In Stock", "rating": 4.5 },
+      { "name": "Wickes", "price": 151.30, "distance": "7 miles", "stock": "Low Stock", "rating": 4.2 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Safety Helmet",
+    "brand": "3M",
+    "category": "safety",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Travis Perkins", "price": 12.50, "distance": "8 miles", "stock": "In Stock", "rating": 4.4 },
+      { "name": "Wickes", "price": 12.95, "distance": "7 miles", "stock": "In Stock", "rating": 4.2 },
+      { "name": "Toolstation", "price": 11.99, "distance": "4 miles", "stock": "Low Stock", "rating": 4.3 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Laser Distance Meter",
+    "brand": "Bosch",
+    "category": "measuring",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=300&h=300&fit=crop",
+    "suppliers": [
+      { "name": "Screwfix", "price": 115.99, "distance": "5 miles", "stock": "In Stock", "rating": 4.7 },
+      { "name": "Toolstation", "price": 114.50, "distance": "4 miles", "stock": "In Stock", "rating": 4.6 },
+      { "name": "Wickes", "price": 118.00, "distance": "7 miles", "stock": "Low Stock", "rating": 4.3 }
+    ]
+  }
+]

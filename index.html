@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoTrade | Sourcing Command Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@10..48,500;10..48,700;10..48,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand-wrap">
+      <p class="eyebrow">Trade Procurement Platform</p>
+      <h1>GoTrade</h1>
+    </div>
+    <p class="topbar-copy">Search products, compare suppliers, and build a rapid-buy shortlist from one screen.</p>
+  </header>
+
+  <main class="layout">
+    <section class="hero panel reveal">
+      <div class="hero-grid">
+        <div>
+          <h2>Source smarter, not slower.</h2>
+          <p class="lead">Real-time supplier snapshots, price-first filtering, and image-based item lookup for urgent site requests.</p>
+        </div>
+        <div class="hero-metrics" id="hero-metrics">
+          <article>
+            <p class="metric-label">Products</p>
+            <p class="metric-value" id="stat-products">-</p>
+          </article>
+          <article>
+            <p class="metric-label">Merchants</p>
+            <p class="metric-value" id="stat-merchants">-</p>
+          </article>
+          <article>
+            <p class="metric-label">Last Sync</p>
+            <p class="metric-value metric-small" id="stat-sync">Just now</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="search-block">
+        <label for="search-input" class="label">Product Search</label>
+        <div class="search-row">
+          <input id="search-input" type="text" placeholder="Try: circular saw, copper pipe, laser level" autocomplete="off">
+          <button id="search-btn" class="btn primary">Find Deals</button>
+          <button id="voice-btn" class="btn ghost">Voice</button>
+        </div>
+      </div>
+
+      <div class="scan-block">
+        <div>
+          <label for="photo-input" class="label">Image Scan</label>
+          <input id="photo-input" type="file" accept="image/*" capture="environment">
+        </div>
+        <button id="scan-btn" class="btn primary">Identify Item</button>
+        <p id="scan-result" class="status-text">Upload a product photo to auto-detect likely matches.</p>
+      </div>
+    </section>
+
+    <section class="controls panel reveal">
+      <div class="filter-head">
+        <h3>Live Filters</h3>
+        <button id="refresh-merchants-btn" class="btn ghost">Refresh Merchant Data</button>
+      </div>
+      <div class="chips" id="filter-chips">
+        <button class="chip active" data-filter="best">Best Match</button>
+        <button class="chip" data-filter="cheapest">Cheapest</button>
+        <button class="chip" data-filter="closest">Closest</button>
+        <button class="chip" data-filter="rated">Top Rated</button>
+        <button class="chip" data-filter="in-stock">In Stock</button>
+        <button class="chip" data-filter="emergency">Emergency Mode</button>
+      </div>
+    </section>
+
+    <section class="results panel reveal">
+      <div class="section-title-row">
+        <h3>Search Results</h3>
+        <p id="result-summary">Run a search to view suppliers.</p>
+      </div>
+      <div id="results-list" class="result-grid"></div>
+    </section>
+
+    <aside class="shortlist panel reveal">
+      <div class="section-title-row">
+        <h3>Shortlist</h3>
+        <button id="clear-shortlist" class="btn tiny">Clear</button>
+      </div>
+      <p class="shortlist-note">Saved products stay in your browser for quick return visits.</p>
+      <div id="saved-list" class="saved-list"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
