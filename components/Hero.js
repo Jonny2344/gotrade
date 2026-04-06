@@ -15,7 +15,7 @@ export default function Hero() {
             Stop wasting time chasing suppliers. Find the right product, at the right price, in seconds.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#waitlist"
               className="flex w-full items-center justify-center rounded-full bg-brand-orange px-8 py-4 text-base font-semibold text-brand-text shadow-[0_14px_36px_rgba(249,115,22,0.38)] transition duration-300 hover:-translate-y-1 hover:bg-[#fb8b3d] hover:shadow-[0_18px_48px_rgba(249,115,22,0.5)] sm:w-auto"
