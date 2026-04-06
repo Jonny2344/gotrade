@@ -226,27 +226,25 @@ export async function POST(request) {
       ].join('\n')
     });
 
-    const [adminResult, autoReplyResult] = await Promise.all([adminEmailPromise, autoReplyPromise]);
+    const [adminResult, autoReplyResult] = await Promise.allSettled([adminEmailPromise, autoReplyPromise]);
 
-    if (adminResult?.error || autoReplyResult?.error) {
-      console.error('Resend delivery error', {
-        adminError: adminResult?.error,
-        autoReplyError: autoReplyResult?.error
+    const adminFailed = adminResult.status === 'rejected' || adminResult.value?.error;
+
+    if (adminFailed) {
+      console.error('Resend admin email error', {
+        adminError: adminResult.reason ?? adminResult.value?.error,
+        autoReplyError: autoReplyResult.reason ?? autoReplyResult.value?.error
       });
 
       return Response.json(
-        {
-          error: 'Email delivery failed. Please retry shortly.',
-          details:
-            process.env.NODE_ENV === 'production'
-              ? undefined
-              : {
-                  adminError: adminResult?.error?.message,
-                  autoReplyError: autoReplyResult?.error?.message
-                }
-        },
+        { error: 'Email delivery failed. Please retry shortly.' },
         { status: 502 }
       );
+    }
+
+    // Auto-reply is best-effort — log but don't fail the request if it errors
+    if (autoReplyResult.status === 'rejected' || autoReplyResult.value?.error) {
+      console.warn('Auto-reply failed (non-critical):', autoReplyResult.reason ?? autoReplyResult.value?.error);
     }
 
     return Response.json({ ok: true, mode: 'resend' });
