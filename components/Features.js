@@ -34,7 +34,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <article
               key={feature.title}
-              className="fade-up glass soft-ring flex h-full flex-col rounded-2xl bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-9 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_34px_rgba(2,8,23,0.28)] transition duration-300 hover:-translate-y-1 hover:border-brand-orange/45 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_18px_40px_rgba(59,130,246,0.18),0_20px_44px_rgba(249,115,22,0.12)]"
+              className="fade-up glass soft-ring flex h-full flex-col rounded-2xl bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6 sm:p-9 shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_14px_34px_rgba(2,8,23,0.28)] transition duration-300 hover:-translate-y-1 hover:border-brand-orange/45 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_18px_40px_rgba(59,130,246,0.18),0_20px_44px_rgba(249,115,22,0.12)]"
               style={{ animationDelay: `${index * 90}ms` }}
             >
               <p className="text-3xl" aria-hidden="true">{feature.icon}</p>

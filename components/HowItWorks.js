@@ -29,7 +29,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <article
               key={step.number}
-              className="fade-up glass soft-ring relative rounded-2xl p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(59,130,246,0.18),0_20px_44px_rgba(249,115,22,0.14)]"
+              className="fade-up glass soft-ring relative rounded-2xl p-6 sm:p-8 transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(59,130,246,0.18),0_20px_44px_rgba(249,115,22,0.14)]"
               style={{ animationDelay: `${index * 90}ms` }}
             >
               <p className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-blue/20 text-xl font-bold text-[#93c5fd]">

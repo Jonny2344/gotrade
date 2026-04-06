@@ -250,3 +250,28 @@ input {
     transition: none !important;
   }
 }
+
+/* =========================
+   MOBILE FIRST FIXES
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce section vertical padding on mobile */
+  .section-space {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* Slightly tighter headings on the smallest screens */
+  h1 {
+    font-size: 1.875rem; /* 30px */
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 1.75rem; /* 28px */
+    line-height: 1.2;
+  }
+
+}

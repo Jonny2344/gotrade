@@ -3,12 +3,12 @@ import ProductPreview from './ProductPreview';
 export default function Hero() {
   return (
     <section className="section-wrap section-space relative overflow-hidden pt-14 sm:pt-20">
-      <div className="section-inner grid items-center gap-18 lg:gap-24 md:grid-cols-2">
+      <div className="section-inner grid items-center gap-12 md:gap-16 lg:gap-24 md:grid-cols-2">
         <div className="fade-up">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.26em] text-brand-muted/60">
             GoTrade
           </p>
-          <h1 className="text-balance text-4xl font-semibold leading-[1.05] text-brand-text sm:text-6xl lg:text-7xl">
+          <h1 className="text-balance text-3xl font-semibold leading-[1.05] text-brand-text sm:text-5xl lg:text-7xl">
             Scan. Find. Save. Fast.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-muted/88 sm:text-lg">
